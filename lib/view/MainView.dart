@@ -4,6 +4,9 @@ import 'package:todoapp/util/bottom_navigation/BottomNavigationController.dart';
 import 'package:todoapp/util/bottom_navigation/BottomNavigationView.dart';
 import 'package:todoapp/util/drawer/DrawerView.dart';
 import 'package:todoapp/view/CounterView.dart';
+import 'package:todoapp/view/HomeView.dart';
+import 'package:todoapp/view/SearchView.dart';
+import 'package:todoapp/view/UserView.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
 class MainView extends StatelessWidget {
@@ -14,10 +17,10 @@ class MainView extends StatelessWidget {
   }
 
   static List<Widget> _pageList = [
+    HomeView(),
+    SearchView(),
     CoutnerView(),
-    CoutnerView(),
-    CoutnerView(),
-    CoutnerView(),
+    UserView(),
   ];
 
   @override
