@@ -23,8 +23,8 @@ class BottomNavigationView extends StatelessWidget {
               label: 'お気に入り',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.supervised_user_circle),
-              label: 'ユーザー',
+              icon: Icon(Icons.web),
+              label: 'Qitta',
             ),
           ],
           type: BottomNavigationBarType.fixed,

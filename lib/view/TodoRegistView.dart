@@ -104,7 +104,7 @@ class TodoRegistView extends StatelessWidget {
                 onChanged: (newValue) {
                   context
                       .read(todoRegistProvider.notifier)
-                      .setTitle(newValue.toString());
+                      .setCategory(newValue.toString());
                 },
                 items:
                     _dropDownMenu.map<DropdownMenuItem<String>>((String value) {

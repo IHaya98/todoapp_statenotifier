@@ -16,8 +16,9 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 # freezed build方法
+```
  flutter pub run build_runner build --delete-conflicting-outputs
-
+```
  # 参考URL
 ### Widget一覧
 https://qiita.com/matsukatsu/items/e289e30231fffb1e4502
@@ -106,9 +107,10 @@ app内のbuild.gradleのminSdkVersionを21に変更する <br>
 # Firebaseのプロジェクト作成
 https://firebase.flutter.dev/docs/overview/
 
-# Firestore rule更新
+## Firestore rule更新
+```
 firebase deploy --only firestore:rules
-
+```
 # スプラッシュ画面を作成する
 pubspec.ymlに下記を設定してコマンドを入力する <br>
 ```

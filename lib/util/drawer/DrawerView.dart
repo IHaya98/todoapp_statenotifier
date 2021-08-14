@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todoapp/repository/fbAuth.dart';
 import 'package:todoapp/util/mytheme/MyThemeController.dart';
+import 'package:todoapp/view/UserView.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
 class DrawerView extends StatelessWidget {
@@ -31,10 +32,12 @@ class DrawerView extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('test'),
+            title: Text('ユーザー'),
+            trailing: Icon(Icons.supervised_user_circle),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.of(context).push(
+                UserView.route(),
+              );
             },
           ),
           ListTile(

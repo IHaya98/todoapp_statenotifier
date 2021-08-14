@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'SigninModel.dart';
+part of 'signin.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,11 +13,11 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$SigninModelTearOff {
-  const _$SigninModelTearOff();
+class _$SigninTearOff {
+  const _$SigninTearOff();
 
-  _SigninModel call({String email = '', String password = ''}) {
-    return _SigninModel(
+  _Signin call({String email = '', String password = ''}) {
+    return _Signin(
       email: email,
       password: password,
     );
@@ -25,33 +25,31 @@ class _$SigninModelTearOff {
 }
 
 /// @nodoc
-const $SigninModel = _$SigninModelTearOff();
+const $Signin = _$SigninTearOff();
 
 /// @nodoc
-mixin _$SigninModel {
+mixin _$Signin {
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SigninModelCopyWith<SigninModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SigninCopyWith<Signin> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SigninModelCopyWith<$Res> {
-  factory $SigninModelCopyWith(
-          SigninModel value, $Res Function(SigninModel) then) =
-      _$SigninModelCopyWithImpl<$Res>;
+abstract class $SigninCopyWith<$Res> {
+  factory $SigninCopyWith(Signin value, $Res Function(Signin) then) =
+      _$SigninCopyWithImpl<$Res>;
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class _$SigninModelCopyWithImpl<$Res> implements $SigninModelCopyWith<$Res> {
-  _$SigninModelCopyWithImpl(this._value, this._then);
+class _$SigninCopyWithImpl<$Res> implements $SigninCopyWith<$Res> {
+  _$SigninCopyWithImpl(this._value, this._then);
 
-  final SigninModel _value;
+  final Signin _value;
   // ignore: unused_field
-  final $Res Function(SigninModel) _then;
+  final $Res Function(Signin) _then;
 
   @override
   $Res call({
@@ -72,31 +70,28 @@ class _$SigninModelCopyWithImpl<$Res> implements $SigninModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SigninModelCopyWith<$Res>
-    implements $SigninModelCopyWith<$Res> {
-  factory _$SigninModelCopyWith(
-          _SigninModel value, $Res Function(_SigninModel) then) =
-      __$SigninModelCopyWithImpl<$Res>;
+abstract class _$SigninCopyWith<$Res> implements $SigninCopyWith<$Res> {
+  factory _$SigninCopyWith(_Signin value, $Res Function(_Signin) then) =
+      __$SigninCopyWithImpl<$Res>;
   @override
   $Res call({String email, String password});
 }
 
 /// @nodoc
-class __$SigninModelCopyWithImpl<$Res> extends _$SigninModelCopyWithImpl<$Res>
-    implements _$SigninModelCopyWith<$Res> {
-  __$SigninModelCopyWithImpl(
-      _SigninModel _value, $Res Function(_SigninModel) _then)
-      : super(_value, (v) => _then(v as _SigninModel));
+class __$SigninCopyWithImpl<$Res> extends _$SigninCopyWithImpl<$Res>
+    implements _$SigninCopyWith<$Res> {
+  __$SigninCopyWithImpl(_Signin _value, $Res Function(_Signin) _then)
+      : super(_value, (v) => _then(v as _Signin));
 
   @override
-  _SigninModel get _value => super._value as _SigninModel;
+  _Signin get _value => super._value as _Signin;
 
   @override
   $Res call({
     Object? email = freezed,
     Object? password = freezed,
   }) {
-    return _then(_SigninModel(
+    return _then(_Signin(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -111,8 +106,8 @@ class __$SigninModelCopyWithImpl<$Res> extends _$SigninModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SigninModel implements _SigninModel {
-  const _$_SigninModel({this.email = '', this.password = ''});
+class _$_Signin implements _Signin {
+  const _$_Signin({this.email = '', this.password = ''});
 
   @JsonKey(defaultValue: '')
   @override
@@ -123,13 +118,13 @@ class _$_SigninModel implements _SigninModel {
 
   @override
   String toString() {
-    return 'SigninModel(email: $email, password: $password)';
+    return 'Signin(email: $email, password: $password)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SigninModel &&
+        (other is _Signin &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
             (identical(other.password, password) ||
@@ -145,12 +140,12 @@ class _$_SigninModel implements _SigninModel {
 
   @JsonKey(ignore: true)
   @override
-  _$SigninModelCopyWith<_SigninModel> get copyWith =>
-      __$SigninModelCopyWithImpl<_SigninModel>(this, _$identity);
+  _$SigninCopyWith<_Signin> get copyWith =>
+      __$SigninCopyWithImpl<_Signin>(this, _$identity);
 }
 
-abstract class _SigninModel implements SigninModel {
-  const factory _SigninModel({String email, String password}) = _$_SigninModel;
+abstract class _Signin implements Signin {
+  const factory _Signin({String email, String password}) = _$_Signin;
 
   @override
   String get email => throw _privateConstructorUsedError;
@@ -158,6 +153,5 @@ abstract class _SigninModel implements SigninModel {
   String get password => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SigninModelCopyWith<_SigninModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$SigninCopyWith<_Signin> get copyWith => throw _privateConstructorUsedError;
 }

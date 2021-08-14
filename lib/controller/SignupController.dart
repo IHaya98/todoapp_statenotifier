@@ -1,12 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/SignupModel.dart';
+import 'package:todoapp/model/signup.dart';
 
-final signupProvider = StateNotifierProvider<SignupController, SignupModel>(
+final signupProvider = StateNotifierProvider<SignupController, Signup>(
     (ref) => SignupController());
 
-class SignupController extends StateNotifier<SignupModel> {
-  SignupController()
-      : super(SignupModel(email: '', password: '', user_name: ''));
+class SignupController extends StateNotifier<Signup> {
+  SignupController() : super(Signup(email: '', password: '', user_name: ''));
 
   void setEmail(String value) {
     state = state.copyWith(email: value);

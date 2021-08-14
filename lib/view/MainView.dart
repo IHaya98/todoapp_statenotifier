@@ -6,7 +6,8 @@ import 'package:todoapp/util/drawer/DrawerView.dart';
 import 'package:todoapp/view/CounterView.dart';
 import 'package:todoapp/view/HomeView.dart';
 import 'package:todoapp/view/SearchView.dart';
-import 'package:todoapp/view/UserView.dart';
+
+import 'QiitaArticleView.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
 class MainView extends StatelessWidget {
@@ -20,7 +21,7 @@ class MainView extends StatelessWidget {
     HomeView(),
     SearchView(),
     CoutnerView(),
-    UserView(),
+    ArticlesView(),
   ];
 
   @override

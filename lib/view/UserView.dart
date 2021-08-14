@@ -12,6 +12,9 @@ class UserView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('ユーザー'),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +35,7 @@ class UserView extends StatelessWidget {
           context.read(counterProvider.notifier).increment();
         },
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.add_alert),
       ),
     );
   }

@@ -1,11 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/UserModel.dart';
+import 'package:todoapp/model/user.dart';
 
 final userProvider =
-    StateNotifierProvider<UserController, UserModel>((ref) => UserController());
+    StateNotifierProvider<UserController, User>((ref) => UserController());
 
-class UserController extends StateNotifier<UserModel> {
-  UserController() : super(UserModel(email: '', user_id: '', user_name: ''));
+class UserController extends StateNotifier<User> {
+  UserController() : super(User(email: '', user_id: '', user_name: ''));
 
   void setEmail(String value) {
     state = state.copyWith(email: value);

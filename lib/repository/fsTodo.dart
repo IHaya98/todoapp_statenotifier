@@ -1,7 +1,7 @@
 import 'package:todoapp/controller/HomeController.dart';
 import 'package:todoapp/controller/TodosController.dart';
 import 'package:todoapp/controller/UserController.dart';
-import 'package:todoapp/model/HomeModel.dart';
+import 'package:todoapp/model/home.dart';
 import 'package:todoapp/view/MainView.dart';
 import 'package:uuid/uuid.dart';
 
@@ -37,7 +37,7 @@ class FSTodo {
   }
 
   //未使用
-  Future<void> readTodo(List<HomeModel> todoList, BuildContext context) {
+  Future<void> readTodo(List<Home> todoList, BuildContext context) {
     return _fs_todo
         .get()
         .then(

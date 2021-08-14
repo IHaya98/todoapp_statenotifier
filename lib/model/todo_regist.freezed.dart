@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'TodoRegistModel.dart';
+part of 'todo_regist.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,16 +13,16 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$TodoRegistModelTearOff {
-  const _$TodoRegistModelTearOff();
+class _$TodoRegistTearOff {
+  const _$TodoRegistTearOff();
 
-  _TodoRegistModel call(
+  _TodoRegist call(
       {String id = '',
       String title = '',
       String detail = '',
       String category = '',
       DateTime? date}) {
-    return _TodoRegistModel(
+    return _TodoRegist(
       id: id,
       title: title,
       detail: detail,
@@ -33,10 +33,10 @@ class _$TodoRegistModelTearOff {
 }
 
 /// @nodoc
-const $TodoRegistModel = _$TodoRegistModelTearOff();
+const $TodoRegist = _$TodoRegistTearOff();
 
 /// @nodoc
-mixin _$TodoRegistModel {
+mixin _$TodoRegist {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
@@ -44,15 +44,15 @@ mixin _$TodoRegistModel {
   DateTime? get date => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $TodoRegistModelCopyWith<TodoRegistModel> get copyWith =>
+  $TodoRegistCopyWith<TodoRegist> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TodoRegistModelCopyWith<$Res> {
-  factory $TodoRegistModelCopyWith(
-          TodoRegistModel value, $Res Function(TodoRegistModel) then) =
-      _$TodoRegistModelCopyWithImpl<$Res>;
+abstract class $TodoRegistCopyWith<$Res> {
+  factory $TodoRegistCopyWith(
+          TodoRegist value, $Res Function(TodoRegist) then) =
+      _$TodoRegistCopyWithImpl<$Res>;
   $Res call(
       {String id,
       String title,
@@ -62,13 +62,12 @@ abstract class $TodoRegistModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TodoRegistModelCopyWithImpl<$Res>
-    implements $TodoRegistModelCopyWith<$Res> {
-  _$TodoRegistModelCopyWithImpl(this._value, this._then);
+class _$TodoRegistCopyWithImpl<$Res> implements $TodoRegistCopyWith<$Res> {
+  _$TodoRegistCopyWithImpl(this._value, this._then);
 
-  final TodoRegistModel _value;
+  final TodoRegist _value;
   // ignore: unused_field
-  final $Res Function(TodoRegistModel) _then;
+  final $Res Function(TodoRegist) _then;
 
   @override
   $Res call({
@@ -104,11 +103,10 @@ class _$TodoRegistModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TodoRegistModelCopyWith<$Res>
-    implements $TodoRegistModelCopyWith<$Res> {
-  factory _$TodoRegistModelCopyWith(
-          _TodoRegistModel value, $Res Function(_TodoRegistModel) then) =
-      __$TodoRegistModelCopyWithImpl<$Res>;
+abstract class _$TodoRegistCopyWith<$Res> implements $TodoRegistCopyWith<$Res> {
+  factory _$TodoRegistCopyWith(
+          _TodoRegist value, $Res Function(_TodoRegist) then) =
+      __$TodoRegistCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -119,15 +117,14 @@ abstract class _$TodoRegistModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TodoRegistModelCopyWithImpl<$Res>
-    extends _$TodoRegistModelCopyWithImpl<$Res>
-    implements _$TodoRegistModelCopyWith<$Res> {
-  __$TodoRegistModelCopyWithImpl(
-      _TodoRegistModel _value, $Res Function(_TodoRegistModel) _then)
-      : super(_value, (v) => _then(v as _TodoRegistModel));
+class __$TodoRegistCopyWithImpl<$Res> extends _$TodoRegistCopyWithImpl<$Res>
+    implements _$TodoRegistCopyWith<$Res> {
+  __$TodoRegistCopyWithImpl(
+      _TodoRegist _value, $Res Function(_TodoRegist) _then)
+      : super(_value, (v) => _then(v as _TodoRegist));
 
   @override
-  _TodoRegistModel get _value => super._value as _TodoRegistModel;
+  _TodoRegist get _value => super._value as _TodoRegist;
 
   @override
   $Res call({
@@ -137,7 +134,7 @@ class __$TodoRegistModelCopyWithImpl<$Res>
     Object? category = freezed,
     Object? date = freezed,
   }) {
-    return _then(_TodoRegistModel(
+    return _then(_TodoRegist(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -164,8 +161,8 @@ class __$TodoRegistModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TodoRegistModel implements _TodoRegistModel {
-  const _$_TodoRegistModel(
+class _$_TodoRegist implements _TodoRegist {
+  const _$_TodoRegist(
       {this.id = '',
       this.title = '',
       this.detail = '',
@@ -189,13 +186,13 @@ class _$_TodoRegistModel implements _TodoRegistModel {
 
   @override
   String toString() {
-    return 'TodoRegistModel(id: $id, title: $title, detail: $detail, category: $category, date: $date)';
+    return 'TodoRegist(id: $id, title: $title, detail: $detail, category: $category, date: $date)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TodoRegistModel &&
+        (other is _TodoRegist &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.title, title) ||
@@ -220,17 +217,17 @@ class _$_TodoRegistModel implements _TodoRegistModel {
 
   @JsonKey(ignore: true)
   @override
-  _$TodoRegistModelCopyWith<_TodoRegistModel> get copyWith =>
-      __$TodoRegistModelCopyWithImpl<_TodoRegistModel>(this, _$identity);
+  _$TodoRegistCopyWith<_TodoRegist> get copyWith =>
+      __$TodoRegistCopyWithImpl<_TodoRegist>(this, _$identity);
 }
 
-abstract class _TodoRegistModel implements TodoRegistModel {
-  const factory _TodoRegistModel(
+abstract class _TodoRegist implements TodoRegist {
+  const factory _TodoRegist(
       {String id,
       String title,
       String detail,
       String category,
-      DateTime? date}) = _$_TodoRegistModel;
+      DateTime? date}) = _$_TodoRegist;
 
   @override
   String get id => throw _privateConstructorUsedError;
@@ -244,6 +241,6 @@ abstract class _TodoRegistModel implements TodoRegistModel {
   DateTime? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TodoRegistModelCopyWith<_TodoRegistModel> get copyWith =>
+  _$TodoRegistCopyWith<_TodoRegist> get copyWith =>
       throw _privateConstructorUsedError;
 }

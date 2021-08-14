@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/CounterModel.dart';
 import 'package:todoapp/util/bottom_navigation/BottomNavigationModel.dart';
-import 'package:todoapp/util/mytheme/MyThemeModel.dart';
 
 final bottomNavigationProvider =
     StateNotifierProvider<BottomNavigationController, BottomNavigationModel>(
@@ -25,7 +22,7 @@ class BottomNavigationController extends StateNotifier<BottomNavigationModel> {
         _title = 'お気に入り';
         break;
       case 3:
-        _title = 'ユーザー';
+        _title = 'Qitta';
         break;
     }
     state = state.copyWith(selectedTabIndex: index, title: _title);

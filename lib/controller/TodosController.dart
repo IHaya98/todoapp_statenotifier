@@ -1,14 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/HomeModel.dart';
-import 'package:todoapp/model/TodosModel.dart';
+import 'package:todoapp/model/home.dart';
+import 'package:todoapp/model/todos.dart';
 
-final todosProvider = StateNotifierProvider<TodosController, TodosModel>(
-    (ref) => TodosController());
+final todosProvider =
+    StateNotifierProvider<TodosController, Todos>((ref) => TodosController());
 
-class TodosController extends StateNotifier<TodosModel> {
-  TodosController() : super(TodosModel(todos: []));
+class TodosController extends StateNotifier<Todos> {
+  TodosController() : super(Todos(todos: []));
 
-  void setTodos(List<HomeModel> list) {
+  void setTodos(List<Home> list) {
     state = state.copyWith(todos: list);
   }
 }

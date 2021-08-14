@@ -1,11 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/CounterModel.dart';
+import 'package:todoapp/model/counter.dart';
 
-final counterProvider = StateNotifierProvider<CounterController, CounterModel>(
+final counterProvider = StateNotifierProvider<CounterController, Counter>(
     (ref) => CounterController());
 
-class CounterController extends StateNotifier<CounterModel> {
-  CounterController() : super(CounterModel(count: 0, isEnabled: true));
+class CounterController extends StateNotifier<Counter> {
+  CounterController() : super(Counter(count: 0, isEnabled: true));
 
   void increment() {
     state = state.copyWith(count: state.count + 1);

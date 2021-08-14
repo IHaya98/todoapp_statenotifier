@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'CounterModel.freezed.dart';
+part 'counter.freezed.dart';
 
 @freezed
-abstract class CounterModel with _$CounterModel {
-  const factory CounterModel({
+abstract class Counter with _$Counter {
+  const factory Counter({
     @Default(0) int count,
     @Default(false) bool isEnabled,
-  }) = _CounterModel;
+  }) = _Counter;
 }

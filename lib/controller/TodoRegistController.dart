@@ -1,13 +1,13 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/TodoRegistModel.dart';
+import 'package:todoapp/model/todo_regist.dart';
 
 final todoRegistProvider =
-    StateNotifierProvider<TodoRegistController, TodoRegistModel>(
+    StateNotifierProvider<TodoRegistController, TodoRegist>(
         (ref) => TodoRegistController());
 
-class TodoRegistController extends StateNotifier<TodoRegistModel> {
+class TodoRegistController extends StateNotifier<TodoRegist> {
   TodoRegistController()
-      : super(TodoRegistModel(
+      : super(TodoRegist(
             id: '', title: '', detail: '', category: '', date: null));
 
   void setId(String value) {

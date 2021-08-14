@@ -1,14 +1,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'TodoRegistModel.freezed.dart';
+part 'todo_regist.freezed.dart';
 
 @freezed
-abstract class TodoRegistModel with _$TodoRegistModel {
-  const factory TodoRegistModel({
+abstract class TodoRegist with _$TodoRegist {
+  const factory TodoRegist({
     @Default('') String id,
     @Default('') String title,
     @Default('') String detail,
     @Default('') String category,
     DateTime? date,
-  }) = _TodoRegistModel;
+  }) = _TodoRegist;
 }

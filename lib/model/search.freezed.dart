@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'HomeModel.dart';
+part of 'search.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,12 +13,12 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$HomeModelTearOff {
-  const _$HomeModelTearOff();
+class _$SearchTearOff {
+  const _$SearchTearOff();
 
-  _HomeModel call(
+  _Search call(
       {String title = '', String detail = '', bool isFavorite = false}) {
-    return _HomeModel(
+    return _Search(
       title: title,
       detail: detail,
       isFavorite: isFavorite,
@@ -27,33 +27,32 @@ class _$HomeModelTearOff {
 }
 
 /// @nodoc
-const $HomeModel = _$HomeModelTearOff();
+const $Search = _$SearchTearOff();
 
 /// @nodoc
-mixin _$HomeModel {
+mixin _$Search {
   String get title => throw _privateConstructorUsedError;
   String get detail => throw _privateConstructorUsedError;
   bool get isFavorite => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomeModelCopyWith<HomeModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchCopyWith<Search> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HomeModelCopyWith<$Res> {
-  factory $HomeModelCopyWith(HomeModel value, $Res Function(HomeModel) then) =
-      _$HomeModelCopyWithImpl<$Res>;
+abstract class $SearchCopyWith<$Res> {
+  factory $SearchCopyWith(Search value, $Res Function(Search) then) =
+      _$SearchCopyWithImpl<$Res>;
   $Res call({String title, String detail, bool isFavorite});
 }
 
 /// @nodoc
-class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
-  _$HomeModelCopyWithImpl(this._value, this._then);
+class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
+  _$SearchCopyWithImpl(this._value, this._then);
 
-  final HomeModel _value;
+  final Search _value;
   // ignore: unused_field
-  final $Res Function(HomeModel) _then;
+  final $Res Function(Search) _then;
 
   @override
   $Res call({
@@ -79,22 +78,21 @@ class _$HomeModelCopyWithImpl<$Res> implements $HomeModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$HomeModelCopyWith<$Res> implements $HomeModelCopyWith<$Res> {
-  factory _$HomeModelCopyWith(
-          _HomeModel value, $Res Function(_HomeModel) then) =
-      __$HomeModelCopyWithImpl<$Res>;
+abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
+  factory _$SearchCopyWith(_Search value, $Res Function(_Search) then) =
+      __$SearchCopyWithImpl<$Res>;
   @override
   $Res call({String title, String detail, bool isFavorite});
 }
 
 /// @nodoc
-class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
-    implements _$HomeModelCopyWith<$Res> {
-  __$HomeModelCopyWithImpl(_HomeModel _value, $Res Function(_HomeModel) _then)
-      : super(_value, (v) => _then(v as _HomeModel));
+class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
+    implements _$SearchCopyWith<$Res> {
+  __$SearchCopyWithImpl(_Search _value, $Res Function(_Search) _then)
+      : super(_value, (v) => _then(v as _Search));
 
   @override
-  _HomeModel get _value => super._value as _HomeModel;
+  _Search get _value => super._value as _Search;
 
   @override
   $Res call({
@@ -102,7 +100,7 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
     Object? detail = freezed,
     Object? isFavorite = freezed,
   }) {
-    return _then(_HomeModel(
+    return _then(_Search(
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -121,9 +119,8 @@ class __$HomeModelCopyWithImpl<$Res> extends _$HomeModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_HomeModel implements _HomeModel {
-  const _$_HomeModel(
-      {this.title = '', this.detail = '', this.isFavorite = false});
+class _$_Search implements _Search {
+  const _$_Search({this.title = '', this.detail = '', this.isFavorite = false});
 
   @JsonKey(defaultValue: '')
   @override
@@ -137,13 +134,13 @@ class _$_HomeModel implements _HomeModel {
 
   @override
   String toString() {
-    return 'HomeModel(title: $title, detail: $detail, isFavorite: $isFavorite)';
+    return 'Search(title: $title, detail: $detail, isFavorite: $isFavorite)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _HomeModel &&
+        (other is _Search &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.detail, detail) ||
@@ -162,13 +159,13 @@ class _$_HomeModel implements _HomeModel {
 
   @JsonKey(ignore: true)
   @override
-  _$HomeModelCopyWith<_HomeModel> get copyWith =>
-      __$HomeModelCopyWithImpl<_HomeModel>(this, _$identity);
+  _$SearchCopyWith<_Search> get copyWith =>
+      __$SearchCopyWithImpl<_Search>(this, _$identity);
 }
 
-abstract class _HomeModel implements HomeModel {
-  const factory _HomeModel({String title, String detail, bool isFavorite}) =
-      _$_HomeModel;
+abstract class _Search implements Search {
+  const factory _Search({String title, String detail, bool isFavorite}) =
+      _$_Search;
 
   @override
   String get title => throw _privateConstructorUsedError;
@@ -178,6 +175,5 @@ abstract class _HomeModel implements HomeModel {
   bool get isFavorite => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$HomeModelCopyWith<_HomeModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$SearchCopyWith<_Search> get copyWith => throw _privateConstructorUsedError;
 }

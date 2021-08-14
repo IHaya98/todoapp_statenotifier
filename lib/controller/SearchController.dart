@@ -1,10 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/SearchModel.dart';
+import 'package:todoapp/model/search.dart';
 
-final searchProvider = StateNotifierProvider<SearchController, SearchModel>(
+final searchProvider = StateNotifierProvider<SearchController, Search>(
     (ref) => SearchController());
 
-class SearchController extends StateNotifier<SearchModel> {
-  SearchController()
-      : super(SearchModel(title: '', detail: '', isFavorite: false));
+class SearchController extends StateNotifier<Search> {
+  SearchController() : super(Search(title: '', detail: '', isFavorite: false));
 }
