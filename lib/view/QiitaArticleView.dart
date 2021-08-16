@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -100,17 +98,13 @@ class _Articles extends StatelessWidget {
         ),
       ),
       onTap: () {
-        if (Platform.isAndroid || Platform.isIOS) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => QiitaArticleDetailView(
-                article: article,
-              ),
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => QiitaArticleDetailView(
+              article: article,
             ),
-          );
-        } else {
-          return;
-        }
+          ),
+        );
       },
     );
   }
