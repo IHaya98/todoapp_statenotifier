@@ -55,9 +55,8 @@ class FBAuth {
 
   Future<void> signOut(BuildContext context) async {
     await _auth.signOut();
-    Navigator.of(context).pushReplacement(
-      SigninView.route(),
-    );
+    Navigator.of(context)
+        .pushAndRemoveUntil(SigninView.route(), (route) => false);
   }
 
   Future<bool> checkAuth(BuildContext context) async {

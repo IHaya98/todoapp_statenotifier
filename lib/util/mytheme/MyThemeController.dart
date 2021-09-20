@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/model/counter.dart';
 import 'package:todoapp/util/mytheme/MyThemeModel.dart';
 
 final themeProvider = StateNotifierProvider<MyThemeController, MyThemeModel>(
