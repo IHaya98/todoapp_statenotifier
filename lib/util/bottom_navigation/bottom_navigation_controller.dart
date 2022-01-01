@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/util/bottom_navigation/BottomNavigationModel.dart';
+import 'package:todoapp/util/bottom_navigation/bottom_navigation.dart';
 
 final bottomNavigationProvider =
     StateNotifierProvider<BottomNavigationController, BottomNavigationModel>(
@@ -7,7 +7,7 @@ final bottomNavigationProvider =
 
 class BottomNavigationController extends StateNotifier<BottomNavigationModel> {
   BottomNavigationController()
-      : super(BottomNavigationModel(selectedTabIndex: 0, title: 'ホーム'));
+      : super(const BottomNavigationModel(selectedTabIndex: 0, title: 'ホーム'));
 
   void onTabTapped(int index) {
     String _title = '';

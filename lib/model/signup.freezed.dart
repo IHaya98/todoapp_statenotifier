@@ -17,10 +17,10 @@ class _$SignupTearOff {
   const _$SignupTearOff();
 
   _Signup call(
-      {String email = '', String user_name = '', String password = ''}) {
+      {String email = '', String username = '', String password = ''}) {
     return _Signup(
       email: email,
-      user_name: user_name,
+      username: username,
       password: password,
     );
   }
@@ -32,7 +32,7 @@ const $Signup = _$SignupTearOff();
 /// @nodoc
 mixin _$Signup {
   String get email => throw _privateConstructorUsedError;
-  String get user_name => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ mixin _$Signup {
 abstract class $SignupCopyWith<$Res> {
   factory $SignupCopyWith(Signup value, $Res Function(Signup) then) =
       _$SignupCopyWithImpl<$Res>;
-  $Res call({String email, String user_name, String password});
+  $Res call({String email, String username, String password});
 }
 
 /// @nodoc
@@ -57,7 +57,7 @@ class _$SignupCopyWithImpl<$Res> implements $SignupCopyWith<$Res> {
   @override
   $Res call({
     Object? email = freezed,
-    Object? user_name = freezed,
+    Object? username = freezed,
     Object? password = freezed,
   }) {
     return _then(_value.copyWith(
@@ -65,9 +65,9 @@ class _$SignupCopyWithImpl<$Res> implements $SignupCopyWith<$Res> {
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      user_name: user_name == freezed
-          ? _value.user_name
-          : user_name // ignore: cast_nullable_to_non_nullable
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
       password: password == freezed
           ? _value.password
@@ -82,7 +82,7 @@ abstract class _$SignupCopyWith<$Res> implements $SignupCopyWith<$Res> {
   factory _$SignupCopyWith(_Signup value, $Res Function(_Signup) then) =
       __$SignupCopyWithImpl<$Res>;
   @override
-  $Res call({String email, String user_name, String password});
+  $Res call({String email, String username, String password});
 }
 
 /// @nodoc
@@ -97,7 +97,7 @@ class __$SignupCopyWithImpl<$Res> extends _$SignupCopyWithImpl<$Res>
   @override
   $Res call({
     Object? email = freezed,
-    Object? user_name = freezed,
+    Object? username = freezed,
     Object? password = freezed,
   }) {
     return _then(_Signup(
@@ -105,9 +105,9 @@ class __$SignupCopyWithImpl<$Res> extends _$SignupCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      user_name: user_name == freezed
-          ? _value.user_name
-          : user_name // ignore: cast_nullable_to_non_nullable
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
       password: password == freezed
           ? _value.password
@@ -120,21 +120,21 @@ class __$SignupCopyWithImpl<$Res> extends _$SignupCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Signup implements _Signup {
-  const _$_Signup({this.email = '', this.user_name = '', this.password = ''});
+  const _$_Signup({this.email = '', this.username = '', this.password = ''});
 
   @JsonKey(defaultValue: '')
   @override
   final String email;
   @JsonKey(defaultValue: '')
   @override
-  final String user_name;
+  final String username;
   @JsonKey(defaultValue: '')
   @override
   final String password;
 
   @override
   String toString() {
-    return 'Signup(email: $email, user_name: $user_name, password: $password)';
+    return 'Signup(email: $email, username: $username, password: $password)';
   }
 
   @override
@@ -143,9 +143,9 @@ class _$_Signup implements _Signup {
         (other is _Signup &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.user_name, user_name) ||
+            (identical(other.username, username) ||
                 const DeepCollectionEquality()
-                    .equals(other.user_name, user_name)) &&
+                    .equals(other.username, username)) &&
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
                     .equals(other.password, password)));
@@ -155,7 +155,7 @@ class _$_Signup implements _Signup {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(user_name) ^
+      const DeepCollectionEquality().hash(username) ^
       const DeepCollectionEquality().hash(password);
 
   @JsonKey(ignore: true)
@@ -165,13 +165,13 @@ class _$_Signup implements _Signup {
 }
 
 abstract class _Signup implements Signup {
-  const factory _Signup({String email, String user_name, String password}) =
+  const factory _Signup({String email, String username, String password}) =
       _$_Signup;
 
   @override
   String get email => throw _privateConstructorUsedError;
   @override
-  String get user_name => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
   @override
   String get password => throw _privateConstructorUsedError;
   @override

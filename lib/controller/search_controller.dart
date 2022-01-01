@@ -5,5 +5,6 @@ final searchProvider = StateNotifierProvider<SearchController, Search>(
     (ref) => SearchController());
 
 class SearchController extends StateNotifier<Search> {
-  SearchController() : super(Search(title: '', detail: '', isFavorite: false));
+  SearchController()
+      : super(const Search(title: '', detail: '', isFavorite: false));
 }

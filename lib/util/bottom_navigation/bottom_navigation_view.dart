@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/util/bottom_navigation/BottomNavigationController.dart';
+import 'package:todoapp/util/bottom_navigation/bottom_navigation_controller.dart';
 
 class BottomNavigationView extends StatelessWidget {
+  const BottomNavigationView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, watch, child) {

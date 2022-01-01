@@ -5,7 +5,7 @@ final counterProvider = StateNotifierProvider<CounterController, Counter>(
     (ref) => CounterController());
 
 class CounterController extends StateNotifier<Counter> {
-  CounterController() : super(Counter(count: 0, isEnabled: true));
+  CounterController() : super(const Counter(count: 0, isEnabled: true));
 
   void increment() {
     state = state.copyWith(count: state.count + 1);

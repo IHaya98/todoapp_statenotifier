@@ -1,8 +1,10 @@
-import 'package:todoapp/controller/HomeController.dart';
-import 'package:todoapp/controller/TodosController.dart';
-import 'package:todoapp/controller/UserController.dart';
+// ignore_for_file: avoid_print
+
+import 'package:todoapp/controller/home_controller.dart';
+import 'package:todoapp/controller/todos_controller.dart';
+import 'package:todoapp/controller/user_controller.dart';
 import 'package:todoapp/model/home.dart';
-import 'package:todoapp/view/MainView.dart';
+import 'package:todoapp/view/main_view.dart';
 import 'package:uuid/uuid.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -10,18 +12,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FSTodo {
-  final _fs_todo = FirebaseFirestore.instance.collection('todo');
+  final _fstodo = FirebaseFirestore.instance.collection('todo');
 
   Future<void> registTodo(String id, String title, String detail,
       DateTime? date, String? category, BuildContext context) {
     if (id == '') {
-      id = Uuid().v1();
+      id = const Uuid().v1();
     }
-    return _fs_todo
+    return _fstodo
         .doc(id)
         .set({
           'id': id,
-          'user_id': context.read(userProvider).user_id,
+          'user_id': context.read(userProvider).userid,
           'title': title,
           'detail': detail,
           'deadline': date,
@@ -38,7 +40,7 @@ class FSTodo {
 
   //未使用
   Future<void> readTodo(List<Home> todoList, BuildContext context) {
-    return _fs_todo
+    return _fstodo
         .get()
         .then(
           (QuerySnapshot snapshots) => {
@@ -60,41 +62,41 @@ class FSTodo {
   }
 
   Future<void> deleteTodo(String id, BuildContext context) {
-    if (id == null) {
+    if (id.isEmpty) {
       print("ID IS NULL");
     }
-    return _fs_todo
+    return _fstodo
         .doc(id)
         .delete()
         .then((value) => print("Todo Deleted"))
         .catchError((error) => print("Failed to delete user: $error"));
   }
 
-  Future<void> addFavorite(String id, String user_id) {
-    if (id == null) {
+  Future<void> addFavorite(String id, String userId) {
+    if (id.isEmpty) {
       print("ID IS NULL");
     }
-    return _fs_todo
+    return _fstodo
         .doc(id)
         .collection('favorite')
-        .doc(user_id)
+        .doc(userId)
         .set({
           'id': id,
-          'user_id': user_id,
+          'user_id': userId,
           'created_dt': Timestamp.now(),
         })
         .then((value) => print("favorite added"))
         .catchError((error) => print("Failed to favorite add: $error"));
   }
 
-  Future<void> deleteFavorite(String id, String user_id) {
-    if (id == null) {
+  Future<void> deleteFavorite(String id, String userId) {
+    if (id.isEmpty) {
       print("ID IS NULL");
     }
-    return _fs_todo
+    return _fstodo
         .doc(id)
         .collection('favorite')
-        .doc(user_id)
+        .doc(userId)
         .delete()
         .then((value) => print("favorite deleted"))
         .catchError((error) => print("Failed to favorite deleted: $error"));

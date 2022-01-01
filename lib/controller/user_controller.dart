@@ -5,17 +5,17 @@ final userProvider =
     StateNotifierProvider<UserController, User>((ref) => UserController());
 
 class UserController extends StateNotifier<User> {
-  UserController() : super(User(email: '', user_id: '', user_name: ''));
+  UserController() : super(const User(email: '', userid: '', username: ''));
 
   void setEmail(String value) {
     state = state.copyWith(email: value);
   }
 
-  void setUser_id(String value) {
-    state = state.copyWith(user_id: value);
+  void setUserid(String value) {
+    state = state.copyWith(userid: value);
   }
 
-  void setUser_name(String value) {
-    state = state.copyWith(user_name: value);
+  void setUsername(String value) {
+    state = state.copyWith(username: value);
   }
 }

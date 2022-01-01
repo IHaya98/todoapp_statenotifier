@@ -7,7 +7,7 @@ final todoRegistProvider =
 
 class TodoRegistController extends StateNotifier<TodoRegist> {
   TodoRegistController()
-      : super(TodoRegist(
+      : super(const TodoRegist(
             id: '', title: '', detail: '', category: '', date: null));
 
   void setId(String value) {

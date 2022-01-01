@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/controller/CounterController.dart';
+import 'package:todoapp/controller/counter_controller.dart';
 
-class UserView extends StatelessWidget {
+class CoutnerView extends StatelessWidget {
+  const CoutnerView({Key? key}) : super(key: key);
+
   static Route<dynamic> route() {
     return MaterialPageRoute<dynamic>(
-      builder: (_) => UserView(),
+      builder: (_) => const CoutnerView(),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('ユーザー'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'user',
+            const Text(
+              'You have pushed the button this many times:',
             ),
             Consumer(
               builder: (context, watch, child) {
-                return Text('${watch(counterProvider).count}');
+                return Text(watch(counterProvider).count.toString());
               },
             ),
           ],
@@ -34,8 +33,7 @@ class UserView extends StatelessWidget {
         onPressed: () {
           context.read(counterProvider.notifier).increment();
         },
-        tooltip: 'Increment',
-        child: Icon(Icons.add_alert),
+        child: const Icon(Icons.autorenew),
       ),
     );
   }

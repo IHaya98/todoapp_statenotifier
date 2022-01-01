@@ -6,7 +6,7 @@ final todosProvider =
     StateNotifierProvider<TodosController, Todos>((ref) => TodosController());
 
 class TodosController extends StateNotifier<Todos> {
-  TodosController() : super(Todos(todos: []));
+  TodosController() : super(const Todos(todos: []));
 
   void setTodos(List<Home> list) {
     state = state.copyWith(todos: list);

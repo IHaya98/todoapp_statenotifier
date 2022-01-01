@@ -2,13 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/controller/TodoRegistController.dart';
-import 'package:todoapp/repository/fsTodo.dart';
+import 'package:todoapp/controller/todoregist_controller.dart';
+import 'package:todoapp/repository/fs_todo.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
 class TodoRegistView extends StatelessWidget {
+  TodoRegistView({Key? key}) : super(key: key);
+
   static Route<dynamic> route(BuildContext context) {
     context.read(todoRegistProvider.notifier).init();
     return MaterialPageRoute<dynamic>(
@@ -17,7 +18,7 @@ class TodoRegistView extends StatelessWidget {
     );
   }
 
-  static Route<dynamic> route_update(BuildContext context, String id,
+  static Route<dynamic> routeUpdate(BuildContext context, String id,
       String title, String detail, Timestamp date, String category) {
     context.read(todoRegistProvider.notifier).init();
     context
@@ -36,8 +37,8 @@ class TodoRegistView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: context.read(todoRegistProvider).title == ''
-            ? Text('新規')
-            : Text('更新'),
+            ? const Text('新規')
+            : const Text('更新'),
         actions: [
           TextButton(
             onPressed: () {
@@ -50,8 +51,8 @@ class TodoRegistView extends StatelessWidget {
                   context);
             },
             child: context.read(todoRegistProvider).title == ''
-                ? Text('追加する')
-                : Text('更新する'),
+                ? const Text('追加する')
+                : const Text('更新する'),
             style: TextButton.styleFrom(
               primary: Colors.white,
             ),
@@ -65,7 +66,7 @@ class TodoRegistView extends StatelessWidget {
             Container(
               width: 350,
               child: DateTimeField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: '日付',
                   icon: Icon(Icons.calendar_today),
                 ),
@@ -96,7 +97,7 @@ class TodoRegistView extends StatelessWidget {
             Container(
               width: 350,
               child: DropdownButtonFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   icon: Icon(Icons.category),
                   labelText: 'カテゴリー',
                 ),
@@ -119,7 +120,7 @@ class TodoRegistView extends StatelessWidget {
               width: 350,
               child: TextFormField(
                   initialValue: context.read(todoRegistProvider).title,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'タイトル',
                     icon: Icon(Icons.title),
                   ),
@@ -132,7 +133,7 @@ class TodoRegistView extends StatelessWidget {
               width: 350,
               child: TextFormField(
                   initialValue: context.read(todoRegistProvider).detail,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'TODO',
                     hintText: '何をする？',
                     icon: Icon(Icons.subtitles),

@@ -16,11 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$UserTearOff {
   const _$UserTearOff();
 
-  _User call({String email = '', String user_id = '', String user_name = ''}) {
+  _User call({String email = '', String userid = '', String username = ''}) {
     return _User(
       email: email,
-      user_id: user_id,
-      user_name: user_name,
+      userid: userid,
+      username: username,
     );
   }
 }
@@ -31,8 +31,8 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   String get email => throw _privateConstructorUsedError;
-  String get user_id => throw _privateConstructorUsedError;
-  String get user_name => throw _privateConstructorUsedError;
+  String get userid => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call({String email, String user_id, String user_name});
+  $Res call({String email, String userid, String username});
 }
 
 /// @nodoc
@@ -56,21 +56,21 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call({
     Object? email = freezed,
-    Object? user_id = freezed,
-    Object? user_name = freezed,
+    Object? userid = freezed,
+    Object? username = freezed,
   }) {
     return _then(_value.copyWith(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      user_id: user_id == freezed
-          ? _value.user_id
-          : user_id // ignore: cast_nullable_to_non_nullable
+      userid: userid == freezed
+          ? _value.userid
+          : userid // ignore: cast_nullable_to_non_nullable
               as String,
-      user_name: user_name == freezed
-          ? _value.user_name
-          : user_name // ignore: cast_nullable_to_non_nullable
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -81,7 +81,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
   @override
-  $Res call({String email, String user_id, String user_name});
+  $Res call({String email, String userid, String username});
 }
 
 /// @nodoc
@@ -96,21 +96,21 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   @override
   $Res call({
     Object? email = freezed,
-    Object? user_id = freezed,
-    Object? user_name = freezed,
+    Object? userid = freezed,
+    Object? username = freezed,
   }) {
     return _then(_User(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      user_id: user_id == freezed
-          ? _value.user_id
-          : user_id // ignore: cast_nullable_to_non_nullable
+      userid: userid == freezed
+          ? _value.userid
+          : userid // ignore: cast_nullable_to_non_nullable
               as String,
-      user_name: user_name == freezed
-          ? _value.user_name
-          : user_name // ignore: cast_nullable_to_non_nullable
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -119,21 +119,21 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_User implements _User {
-  const _$_User({this.email = '', this.user_id = '', this.user_name = ''});
+  const _$_User({this.email = '', this.userid = '', this.username = ''});
 
   @JsonKey(defaultValue: '')
   @override
   final String email;
   @JsonKey(defaultValue: '')
   @override
-  final String user_id;
+  final String userid;
   @JsonKey(defaultValue: '')
   @override
-  final String user_name;
+  final String username;
 
   @override
   String toString() {
-    return 'User(email: $email, user_id: $user_id, user_name: $user_name)';
+    return 'User(email: $email, userid: $userid, username: $username)';
   }
 
   @override
@@ -142,20 +142,19 @@ class _$_User implements _User {
         (other is _User &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.user_id, user_id) ||
+            (identical(other.userid, userid) ||
+                const DeepCollectionEquality().equals(other.userid, userid)) &&
+            (identical(other.username, username) ||
                 const DeepCollectionEquality()
-                    .equals(other.user_id, user_id)) &&
-            (identical(other.user_name, user_name) ||
-                const DeepCollectionEquality()
-                    .equals(other.user_name, user_name)));
+                    .equals(other.username, username)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(user_id) ^
-      const DeepCollectionEquality().hash(user_name);
+      const DeepCollectionEquality().hash(userid) ^
+      const DeepCollectionEquality().hash(username);
 
   @JsonKey(ignore: true)
   @override
@@ -164,15 +163,14 @@ class _$_User implements _User {
 }
 
 abstract class _User implements User {
-  const factory _User({String email, String user_id, String user_name}) =
-      _$_User;
+  const factory _User({String email, String userid, String username}) = _$_User;
 
   @override
   String get email => throw _privateConstructorUsedError;
   @override
-  String get user_id => throw _privateConstructorUsedError;
+  String get userid => throw _privateConstructorUsedError;
   @override
-  String get user_name => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

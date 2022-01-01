@@ -5,7 +5,8 @@ final homeProvider =
     StateNotifierProvider<HomeController, Home>((ref) => HomeController());
 
 class HomeController extends StateNotifier<Home> {
-  HomeController() : super(Home(title: '', detail: '', isFavorite: false));
+  HomeController()
+      : super(const Home(title: '', detail: '', isFavorite: false));
 
   Home set(String title, String detail) {
     state = state.copyWith(title: title, detail: detail);

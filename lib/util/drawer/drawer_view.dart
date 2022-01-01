@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/repository/fbAuth.dart';
-import 'package:todoapp/util/mytheme/MyThemeController.dart';
-import 'package:todoapp/view/UserView.dart';
+import 'package:todoapp/repository/fb_auth.dart';
+import 'package:todoapp/util/mytheme/mythme_controller.dart';
+import 'package:todoapp/view/user_view.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
 class DrawerView extends StatelessWidget {
+  const DrawerView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -16,7 +18,7 @@ class DrawerView extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 60,
             child: DrawerHeader(
               decoration: BoxDecoration(
@@ -32,8 +34,8 @@ class DrawerView extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('ユーザー'),
-            trailing: Icon(Icons.supervised_user_circle),
+            title: const Text('ユーザー'),
+            trailing: const Icon(Icons.supervised_user_circle),
             onTap: () {
               Navigator.of(context).push(
                 UserView.route(),
@@ -41,8 +43,8 @@ class DrawerView extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('ログアウト'),
-            trailing: Icon(Icons.logout),
+            title: const Text('ログアウト'),
+            trailing: const Icon(Icons.logout),
             onTap: () {
               // Update the state of the app.
               FBAuth().signOut(context);
@@ -50,9 +52,9 @@ class DrawerView extends StatelessWidget {
           ),
           Consumer(
             builder: (context, watch, child) {
-              return new SwitchListTile(
+              return SwitchListTile(
                 value: watch(themeProvider).isDark,
-                title: Text('ダークモード'),
+                title: const Text('ダークモード'),
                 onChanged: (value) =>
                     {context.read(themeProvider.notifier).toggle()},
               );

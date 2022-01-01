@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'MyThemeModel.freezed.dart';
+part 'mytheme.freezed.dart';
 
 @freezed
 abstract class MyThemeModel with _$MyThemeModel {

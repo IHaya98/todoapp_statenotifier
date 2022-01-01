@@ -1,26 +1,27 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/repository/fbAuth.dart';
-import 'package:todoapp/util/mytheme/MyThemeController.dart';
-import 'package:todoapp/view/CounterView.dart';
-import 'package:todoapp/view/MainView.dart';
-import 'package:todoapp/view/SigninView.dart';
+import 'package:todoapp/repository/fb_auth.dart';
+import 'package:todoapp/util/mytheme/mythme_controller.dart';
+import 'package:todoapp/view/main_view.dart';
+import 'package:todoapp/view/signin_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (Firebase.apps.length == 0) {
+  if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
   }
 
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return loggedIn(context);
@@ -32,16 +33,16 @@ class MyApp extends StatelessWidget {
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return const Center(
-            child: const CircularProgressIndicator(),
+            child: CircularProgressIndicator(),
           );
         }
-        final FirstScreen = snapshot.data ? MainView() : SigninView();
+        final firstScreen = snapshot.data ? MainView() : const SigninView();
         return Consumer(
           builder: (context, watch, child) {
             return MaterialApp(
               title: 'TodoApp',
               theme: watch(themeProvider).current,
-              home: FirstScreen,
+              home: firstScreen,
             );
           },
         );

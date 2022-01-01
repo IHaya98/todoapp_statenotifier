@@ -5,7 +5,7 @@ final signinProvider = StateNotifierProvider<SigninController, Signin>(
     (ref) => SigninController());
 
 class SigninController extends StateNotifier<Signin> {
-  SigninController() : super(Signin(email: '', password: ''));
+  SigninController() : super(const Signin(email: '', password: ''));
 
   void setEmail(String value) {
     state = state.copyWith(email: value);

@@ -5,7 +5,8 @@ final signupProvider = StateNotifierProvider<SignupController, Signup>(
     (ref) => SignupController());
 
 class SignupController extends StateNotifier<Signup> {
-  SignupController() : super(Signup(email: '', password: '', user_name: ''));
+  SignupController()
+      : super(const Signup(email: '', password: '', username: ''));
 
   void setEmail(String value) {
     state = state.copyWith(email: value);
@@ -15,7 +16,7 @@ class SignupController extends StateNotifier<Signup> {
     state = state.copyWith(password: value);
   }
 
-  void setUser_name(String value) {
-    state = state.copyWith(user_name: value);
+  void setUsername(String value) {
+    state = state.copyWith(username: value);
   }
 }

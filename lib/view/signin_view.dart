@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todoapp/controller/SignupController.dart';
-import 'package:todoapp/repository/fbAuth.dart';
+import 'package:todoapp/controller/signin_controller.dart';
+import 'package:todoapp/repository/fb_auth.dart';
+import 'package:todoapp/view/signup_view.dart';
 
 // Since the state was moved to the view model, this is now a StatelessWidget.
-class SignupView extends StatelessWidget {
+class SigninView extends StatelessWidget {
+  const SigninView({Key? key}) : super(key: key);
+
   static Route<dynamic> route() {
     return MaterialPageRoute<dynamic>(
-      builder: (_) => SignupView(),
+      builder: (_) => const SigninView(),
     );
   }
 
@@ -15,7 +18,7 @@ class SignupView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('新規登録'),
+        title: const Text('ログイン'),
         backgroundColor: Colors.white.withOpacity(0.0),
         elevation: 0.0,
       ),
@@ -25,9 +28,9 @@ class SignupView extends StatelessWidget {
           Container(
             height: double.infinity,
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/image/signup.png'),
+                image: AssetImage('assets/image/login.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -56,7 +59,7 @@ class SignupView extends StatelessWidget {
                 Container(
                   width: 350,
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Email',
                       hintText: 'xxx@xxx.xxx',
                       icon: Icon(
@@ -66,39 +69,18 @@ class SignupView extends StatelessWidget {
                       hintStyle: TextStyle(color: Colors.white),
                       labelStyle: TextStyle(color: Colors.white),
                     ),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                     validator: (value) => value!.isEmpty ? 'Eメールは必須項目' : null,
                     onChanged: (value) =>
-                        context.read(signupProvider.notifier).setEmail(value),
+                        context.read(signinProvider.notifier).setEmail(value),
                   ),
                 ),
                 Container(
                   width: 350,
                   child: TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Username',
-                      icon: Icon(
-                        Icons.mail,
-                        color: Colors.white,
-                      ),
-                      hintStyle: TextStyle(color: Colors.white),
-                      labelStyle: TextStyle(color: Colors.white),
-                    ),
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                    validator: (value) => value!.isEmpty ? 'ユーザー名は必須項目' : null,
-                    onChanged: (value) => context
-                        .read(signupProvider.notifier)
-                        .setUser_name(value),
-                  ),
-                ),
-                Container(
-                  width: 350,
-                  child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Password',
                       icon: Icon(
                         Icons.password,
@@ -107,17 +89,17 @@ class SignupView extends StatelessWidget {
                       hintStyle: TextStyle(color: Colors.white),
                       labelStyle: TextStyle(color: Colors.white),
                     ),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                     validator: (value) => value!.isEmpty ? 'パスワードは必須項目' : null,
                     onChanged: (value) => context
-                        .read(signupProvider.notifier)
+                        .read(signinProvider.notifier)
                         .setPassword(value),
                     obscureText: true,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Container(
@@ -127,17 +109,34 @@ class SignupView extends StatelessWidget {
                     width: 350,
                     height: 50,
                     child: ElevatedButton(
-                      child: const Text('登録'),
+                      child: const Text('ログイン'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        onPrimary: Colors.black,
+                      ),
+                      onPressed: () {
+                        FBAuth().signIn(context.read(signinProvider).email,
+                            context.read(signinProvider).password, context);
+                      },
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: 350,
+                    height: 50,
+                    child: ElevatedButton(
+                      child: const Text('新規登録'),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.orange,
                         onPrimary: Colors.white,
                       ),
                       onPressed: () {
-                        FBAuth().signUp(
-                            context.read(signupProvider).email,
-                            context.read(signupProvider).user_name,
-                            context.read(signupProvider).password,
-                            context);
+                        Navigator.of(context).push(
+                          SignupView.route(),
+                        );
                       },
                     ),
                   ),

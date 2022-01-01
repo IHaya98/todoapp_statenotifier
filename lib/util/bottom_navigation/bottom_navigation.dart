@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'BottomNavigationModel.freezed.dart';
+part 'bottom_navigation.freezed.dart';
 
 @freezed
 abstract class BottomNavigationModel with _$BottomNavigationModel {

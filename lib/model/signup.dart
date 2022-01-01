@@ -6,7 +6,7 @@ part 'signup.freezed.dart';
 abstract class Signup with _$Signup {
   const factory Signup({
     @Default('') String email,
-    @Default('') String user_name,
+    @Default('') String username,
     @Default('') String password,
   }) = _Signup;
 }
