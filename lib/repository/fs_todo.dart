@@ -23,7 +23,7 @@ class FSTodo {
         .doc(id)
         .set({
           'id': id,
-          'user_id': context.read(userProvider).userid,
+          'userid': context.read(userProvider).userid,
           'title': title,
           'detail': detail,
           'deadline': date,
@@ -82,7 +82,7 @@ class FSTodo {
         .doc(userId)
         .set({
           'id': id,
-          'user_id': userId,
+          'userid': userId,
           'created_dt': Timestamp.now(),
         })
         .then((value) => print("favorite added"))

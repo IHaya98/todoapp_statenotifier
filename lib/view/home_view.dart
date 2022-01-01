@@ -49,7 +49,7 @@ class HomeView extends StatelessWidget {
           children: snapshot.data!.docs.map(
             (DocumentSnapshot document) {
               final data = document.data()! as Map<String, dynamic>;
-              if (data['user_id'] == context.read(userProvider).userid) {
+              if (data['userid'] == context.read(userProvider).userid) {
                 return Card(
                   child: Padding(
                     padding: const EdgeInsets.all(12),
@@ -141,7 +141,7 @@ class HomeView extends StatelessWidget {
           favoriteCount++;
           if (!isFavorite) {
             isFavorite =
-                dataTest['user_id'] == context.read(userProvider).userid;
+                dataTest['userid'] == context.read(userProvider).userid;
           }
         }).toList();
         return ElevatedButton.icon(

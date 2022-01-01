@@ -66,7 +66,7 @@ class SearchView extends StatelessWidget {
                     Text('カテゴリー：${data['category']}'),
                     const SizedBox(height: 12),
                     Text(
-                        'by ${data['user_id'] == context.read(userProvider).userid ? context.read(userProvider).username : ''}'),
+                        'by ${data['userid'] == context.read(userProvider).userid ? context.read(userProvider).username : ''}'),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -136,7 +136,7 @@ class SearchView extends StatelessWidget {
           favoriteCount++;
           if (!isFavorite) {
             isFavorite =
-                dataTest['user_id'] == context.read(userProvider).userid;
+                dataTest['userid'] == context.read(userProvider).userid;
           }
         }).toList();
         return ElevatedButton.icon(
